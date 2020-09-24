@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExplainToMeController!{% endblock %}
+
+{% block body %}
+    <h1 class="text-center m-5">Explications</h1>
+
+    <div class="container">
+
+        <div class="row m-3">
+
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-title text-center">Symfony 4.3.4</h5>
+                    <img src="{{ asset('img/logo_symfony.png') }}" class="card-img-top" alt="Symfony">
+                    <div class="card-body">
+                        <p class="card-text card-explain">Symfony est relativement simple à installer et la création d'un projet vide ou d'un "squelette" l'est encore plus.
+                            <br><br>A l'inverse, apréhender les composants, maitriser le routing, manipuler les services, accorder le templating, déboguer... est une autre paire de manches !
+                            <br><br>J'utilise l'excellent IDE PHPStorm de JetbrBrains, mais ça c'est du détail, et l'utilisation d'un terminal est indispensable pour exécuter les lignes de commande.
+                        </p>
+
+                        <h4>Création du project</h4>
+                        <pre class="card-explain">> <span>composer require symfony</span>
+> <span>composer create-project symfony/skeleton crudIT</span>
+> <span>php bin/console server:run</span></pre>
+
+                        <h4>Clonage du projet</h4>
+                        <pre class="card-explain">> <span>git clone https://github.com/ahmidbbc/crudIT</span>
+> <span>composer install</span>
+> <span>yarn install</span>
+> <span>php bin/console server:run</span></pre>
+                        <a href="https://github.com/ahmidbbc" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> Accéder au repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-title text-center">Doctrine ORM 2.6.3</h5>
+                    <img src="{{ asset('img/logo_doctrine.png') }}" class="card-img-top" alt="Doctrine">
+                    <div class="card-body">
+
+                        <p class="card-text card-explain">
+                            CRUD'IT commme son nom l'indique est un exercie de persitence de données dans lequel j'ai choisi d'utiliser Symfony 4 et Doctrine ORM.
+                            <br><br>A l'instar du bundle Maker qui nous fait énormément gagner en productivité, Doctrine nous permet (via PDO et DBAL) de mapper nos objets (entities), les hydrater et les manipuler.
+                            <br><br>Doctrine est le lien (couche d'abstraction) entre notre base de données (relationnelle) et nos objets. La gestion de versions est également très appréciée.
+                            <br>La configuration de la BD est définie dans le fichier <code>.env</code>
+                        </p>
+
+                        <h4>Création de la base de données</h4>
+                        <pre class="card-explain">> <span>php bin/console doctrine:database:create</span></pre>
+
+                        <h4>Création d'une entité avec Maker</h4>
+                        <pre class="card-explain">> <span>php bin/console make:entity</span></pre>
+                        <a href="https://www.doctrine-project.org/index.html" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-book"></i> Accéder à la documentation
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-title text-center">Symfony 4.3.4</h5>
+                    <img src="{{ asset('img/logo_twig.png') }}" class="card-img-top" alt="Symfony">
+                    <div class="card-body">
+                        <p class="card-text card-explain">Symfony est relativement simple à installer et la création d'un projet vide ou d'un "squelette" l'est encore plus.
+                            <br><br>A l'inverse, apréhender les composants, maitriser le routing, manipuler les services, accorder le templating, déboguer... est une autre paire de manches !
+                            <br><br>J'utilise l'excellent IDE PHPStorm de JetbrBrains, mais ça c'est du détail, et l'utilisation d'un terminal est indispensable pour exécuter les lignes de commande.
+                        </p>
+
+                        <h4>Création du project</h4>
+                        <pre class="card-explain">> <span>composer require symfony</span>
+> <span>composer create-project symfony/skeleton crudIT</span>
+> <span>php bin/console server:run</span></pre>
+
+                        <h4>Clonage du projet</h4>
+                        <pre class="card-explain">> <span>git clone https://github.com/ahmidbbc/crudIT</span>
+> <span>composer install</span>
+> <span>yarn install</span>
+> <span>php bin/console server:run</span></pre>
+                        <a href="https://github.com/ahmidbbc" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-github"></i> Accéder au repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row m-3">
+
+            <div class="col-sm">
+                <div class="card">
+                    <h5 class="card-title text-center">Webpack Encore</h5>
+                    <img src="{{ asset('img/logo_webpack.png') }}" class="card-img-top" alt="Webpack Encore">
+                    <div class="card-body">
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <h5 class="card-title text-center">Alice Fixtures</h5>
+                    <img src="{{ asset('img/logo_alice.png') }}" class="card-img-top" alt="Alice Fixtures">
+                    <div class="card-body">
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <h5 class="card-title text-center">Symfony Form & Security-csrf</h5>
+                    <img src="{{ asset('img/logo_symfonyForm.png') }}" class="card-img-top" alt="Symfony Form">
+                    <div class="card-body">
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

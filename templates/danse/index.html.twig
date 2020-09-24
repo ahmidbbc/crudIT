@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les danses{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Liste des danses</h1>
+    <div>
+        <a href="{{ path('danse_new') }}" class="btn btn-primary">Ajouter une danse</a>
+    </div>
+    <br>
+    <table id="data-danses" class="table table-responsive table-striped table-bordered">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th>Danse</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Elèves inscrits</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for danse in danses %}
+            <tr>
+                <td>{{ danse.nom }}</td>
+                <td>{{ danse.type }}</td>
+                <td>{{ danse.description }}</td>
+                <td>
+                    {% for eleve in danse.eleves %}
+                        <li>{{ eleve.nom }}</li>
+                    {% endfor %}
+                </td>
+                <td >
+                    <a href="{{ path('danse_show', {'id': danse.id}) }}" class="btn btn-secondary btn-block">Détails</a>
+                    <a href="{{ path('danse_edit', {'id': danse.id}) }}" class="btn btn-info btn-block">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucune entrée dans la base de données</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <!-- TODO : fix jquery webpack issue-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#data-danses').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                }
+            } );
+        } );
+    </script>
+{% endblock %}

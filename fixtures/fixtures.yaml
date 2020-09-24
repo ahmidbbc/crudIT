@@ -1,0 +1,20 @@
+App\Entity\Eleve:
+  eleve{1..10}:
+    nomEleve: <username()>
+    prenomELeve: <firstName()>
+    sexeEleve: <randomElement(['F','M'])>
+    dateNaissanceEleve: <date_create()>
+    addresse: <streetAddress()>
+    cp: <postcode()>
+    ville: <city()>
+    email: <email()>
+    telFixe: <fr_FR:phoneNumber()>
+    telPortable: hotel_gb91@gmail.com
+    taille: <numberBetween(140, 220)>
+    stationMetro: <text(300)>
+    idDanse: <randomElement([@danse_*], 10)>
+
+App\Entity\Danse:
+  danse{1..10}:
+    nomDanse: <lastname()>
+

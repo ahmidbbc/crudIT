@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{{ path('home') }}">
+        <img src="{{ asset('img/logo.png') }}" alt="logo" width="40px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home') }}" >Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="{{ path('eleve_index') }}">Les élèves<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('danse_index') }}">Les danses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('explain_to_me') }}">Expliques-moi <i class="fas fa-question-circle"></i></a>
+            </li>
+        </ul>
+        <div class="credit">
+            By <a href="mailto:ahmidbbc@gmail.com">Abdel</a> with Symfony 4, Doctrine, Twig & more...
+        </div>
+        <!--
+        <form class="form-inline my-2 my-lg-0">
+            <div id="data-eleves_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="data-eleves"></label></div>
+            <button class="btn btn-dark my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+        -->
+    </div>
+</nav>
+

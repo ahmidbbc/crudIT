@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails élève{% endblock %}
+
+{% block body %}
+    <h1>Détails de l'élève</h1>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ eleve.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ eleve.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ eleve.sexe }}</td>
+            </tr>
+            <tr>
+                <th>Date de naissance</th>
+                <td>{{ eleve.dateNaissance ? eleve.dateNaissance|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ eleve.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Code Postal</th>
+                <td>{{ eleve.cp }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ eleve.ville }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ eleve.email }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone Fixe</th>
+                <td>{{ eleve.telFixe }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone Portable</th>
+                <td>{{ eleve.telPortable }}</td>
+            </tr>
+            <tr>
+                <th>Taille</th>
+                <td>{{ eleve.taille }} cm</td>
+            </tr>
+            <tr>
+                <th>Station de Métro</th>
+                <td>{{ eleve.stationMetro }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('eleve_index') }}" class="btn btn-primary">Retour à la liste</a>
+
+    <a href="{{ path('eleve_edit', {'id': eleve.id}) }}" class="btn btn-info">Modifier</a>
+
+    {{ include('eleve/_delete_form.html.twig') }}
+{% endblock %}

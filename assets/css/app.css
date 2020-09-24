@@ -1,0 +1,64 @@
+body {
+    background-color: #fff;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+.credit{
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
+
+.credit a{
+    /* text-decoration: none; */
+    color: #fff;
+    font-weight: bold;
+}
+
+table{
+    padding: 10px;
+}
+
+@keyframes bowl-dance {
+    from, 49% { transform-origin: -50% 100%; }
+    50%, 75%, to { transform-origin: 150% 100%; }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.bowl {
+    animation: bowl-dance 1s 2 alternate ease-in-out;
+    width: 40vh;
+}
+
+.bowl-animation:hover{
+    animation: bowl-dance 1s 2 alternate ease-in-out;
+    cursor: pointer;
+}
+
+.badge-pill{
+    font-size: 1.1em;
+}
+
+pre {
+    background-color: #000;
+    color: #CCC;
+    border: 1px solid #999;
+    display: block;
+    padding: 2px;
+}
+
+pre span{
+    color: chartreuse;
+}
+
+.card-explain{
+    font-size: 0.8em;
+}

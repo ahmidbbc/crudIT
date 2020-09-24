@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kevin's Project{% endblock %}
+
+{% block body %}
+
+    <div class="row m-4">
+        <div class="col-8">
+            <h1 class="text-right display-1">CRUD'IT HauteSchool </h1>
+            <h2 class="text-right display-4">L'école d'Alice, ses danses, <br> ses élèves et ses salades !</h2>
+        </div>
+        <div class="col-4 bowl-animation">
+            <img src="{{ asset('img/bowl2.png') }}" class="card-img bowl" alt="bowl">
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Dans ce projet je vais vous raconter des salades ! Enfin pas tout a fait...
+            <br>L'exercice, un simple CRUD, consiste surtout à expérimenter le framework Symfony 4, la puissance de Doctrine ORM, l'agréable moteur de templates Twig et l'architecture MVC.
+            <br><br>Vous l'aurez compris, tout est fake car j'utilise <a href="https://github.com/nelmio/alice">Alice</a> pour générer des fixtures (fausses données) depuis un fichier fixtures.yaml.
+            <br>C'est aussi l'occasion de tester un bundle intéressant par exemple pour observer le comportement une application manipulant différents volume de données sans avoir à les créer manuellement.
+        </p>
+    </div>
+
+    <div class="row justify-content-center m-5">
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Liste des élèves</h5>
+                    <p class="card-text">
+                        La liste complète des elèves et les danses qu'ils pratiquent.<br>
+                        Vous pouvez ajouter, modifier ou supprimer un élèves et voir sa fiche en détails.
+                    </p>
+                    <a href="{{ path('eleve_index') }}" class="btn btn-primary">
+                        Accéder à la liste des élèves
+                        <span class="badge badge-light">
+                                {{ eleves|length }}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Liste des danses</h5>
+                    <p class="card-text">
+                        La liste complète des danses et des élèvent inscrits.<br>
+                        Vous pouvez ajouter, modifier ou supprimer une danse et voir sa fiche en détails.
+                    </p>
+                    <a href="{{ path('danse_index') }}" class="btn btn-primary">
+                        Accéder à la liste des danses
+                        <span class="badge badge-light">
+                                {{ danses|length }}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row p-3 bg-dark">
+        <div class="col-2"><span class="badge badge-pill badge-light">Symfony 4.3.4</span></div>
+        <div class="col-2"><span class="badge badge-pill badge-danger">Doctrine ORM 2.6.3</span></div>
+        <div class="col-2"><span class="badge badge-pill badge-success">Twig 2.11.3</span></div>
+        <div class="col-2"><span class="badge badge-pill badge-primary">Webpack Encore</span></div>
+        <div class="col-2"><span class="badge badge-pill badge-warning">Alice Fixtures Bundle</span></div>
+        <div class="col-2"><span class="badge badge-pill badge-info">Symfony Form & Security-csrf</span></div>
+    </div>
+{% endblock %}
