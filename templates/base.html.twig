@@ -16,6 +16,10 @@
 
         {% endblock %}
 
+        {% block footer %}
+            {{ include('_fragments/footer.html.twig') }}
+        {% endblock %}
+
         {% block javascripts %}
 
             {{ encore_entry_script_tags('js/app') }}

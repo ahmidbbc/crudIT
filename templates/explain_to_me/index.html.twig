@@ -8,16 +8,18 @@
     <div class="container">
 
         <div class="row m-3">
-
-            <div class="col-4">
+            
+            <div class="col-4 d-flex flex-column flex-md-row">
                 <div class="card">
                     <h5 class="card-title text-center">Symfony 4.3.4</h5>
                     <img src="{{ asset('img/logo_symfony.png') }}" class="card-img-top" alt="Symfony">
-                    <div class="card-body">
-                        <p class="card-text card-explain">Symfony est relativement simple à installer et la création d'un projet vide ou d'un "squelette" l'est encore plus.
-                            <br><br>A l'inverse, apréhender les composants, maitriser le routing, manipuler les services, accorder le templating, déboguer... est une autre paire de manches !
-                            <br><br>J'utilise l'excellent IDE PHPStorm de JetbrBrains, mais ça c'est du détail, et l'utilisation d'un terminal est indispensable pour exécuter les lignes de commande.
+                    <div class="card-body d-flex flex-column justify-content-between ">
+                        <p class="card-text card-explain">Symfony est relativement simple à installer et la création d'un projet vide ou "squelette" l'est davantage.
+                            <br><br>A l'inverse maitriser le routing et les les composants, manipuler les services, accorder le templating, déboguer... est une autre paire de manches !
+                            <br><br>J'utilise l'excellent IDE PHPStorm de JetbrBrains, mais ça c'est du détail, et l'utilisation d'un terminal est indispensable pour exécuter les commandes.
                         </p>
+
+                        <hr>
 
                         <h4>Création du project</h4>
                         <pre class="card-explain">> <span>composer require symfony</span>
@@ -29,61 +31,67 @@
 > <span>composer install</span>
 > <span>yarn install</span>
 > <span>php bin/console server:run</span></pre>
-                        <a href="https://github.com/ahmidbbc" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> Accéder au repository
+                        <a href="https://symfony.com/doc/current/index.html" target="_blank" class="btn btn-primary btn-block">
+                            <i class="fas fa-book"></i> Accéder à la documentation
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 d-flex flex-column flex-md-row">
                 <div class="card">
                     <h5 class="card-title text-center">Doctrine ORM 2.6.3</h5>
                     <img src="{{ asset('img/logo_doctrine.png') }}" class="card-img-top" alt="Doctrine">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column justify-content-between ">
 
                         <p class="card-text card-explain">
-                            CRUD'IT commme son nom l'indique est un exercie de persitence de données dans lequel j'ai choisi d'utiliser Symfony 4 et Doctrine ORM.
+                            CRUD'IT comme son nom l'indique est un exercice de persistence de données dans lequel j'ai choisi d'utiliser Symfony 4 et Doctrine ORM.
                             <br><br>A l'instar du bundle Maker qui nous fait énormément gagner en productivité, Doctrine nous permet (via PDO et DBAL) de mapper nos objets (entities), les hydrater et les manipuler.
                             <br><br>Doctrine est le lien (couche d'abstraction) entre notre base de données (relationnelle) et nos objets. La gestion de versions est également très appréciée.
                             <br>La configuration de la BD est définie dans le fichier <code>.env</code>
                         </p>
+
+                        <hr>
 
                         <h4>Création de la base de données</h4>
                         <pre class="card-explain">> <span>php bin/console doctrine:database:create</span></pre>
 
                         <h4>Création d'une entité avec Maker</h4>
                         <pre class="card-explain">> <span>php bin/console make:entity</span></pre>
-                        <a href="https://www.doctrine-project.org/index.html" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-book"></i> Accéder à la documentation
-                        </a>
-
+                            <a href="https://www.doctrine-project.org/index.html" target="_blank" class="btn btn-primary btn-block">
+                                <i class="fas fa-book"></i> Accéder à la documentation
+                            </a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 d-flex flex-column flex-md-row">
                 <div class="card">
-                    <h5 class="card-title text-center">Symfony 4.3.4</h5>
+                    <h5 class="card-title text-center">Twig {{ constant('Twig_Environment::VERSION') }}</h5>
                     <img src="{{ asset('img/logo_twig.png') }}" class="card-img-top" alt="Symfony">
-                    <div class="card-body">
-                        <p class="card-text card-explain">Symfony est relativement simple à installer et la création d'un projet vide ou d'un "squelette" l'est encore plus.
-                            <br><br>A l'inverse, apréhender les composants, maitriser le routing, manipuler les services, accorder le templating, déboguer... est une autre paire de manches !
-                            <br><br>J'utilise l'excellent IDE PHPStorm de JetbrBrains, mais ça c'est du détail, et l'utilisation d'un terminal est indispensable pour exécuter les lignes de commande.
+                    <div class="card-body d-flex flex-column justify-content-between ">
+                        <p class="card-text card-explain">Twig est le moteur de template (le rendu) par défaut de Symfony, mais il reste facultatif.
+                            <br><br>Il facilite grandement la création d'interface graphique et permet de réduire la quantité de code. Il est également pratique pour implémenter un premier niveau de sécurité par exemple avec les pipes et l'interpolation de variables.
+                            <br><br>Twig c'est avant tout un outil puissant, facile à mettre en place et qui permet de créer des applications fluides rapidement.
                         </p>
 
-                        <h4>Création du project</h4>
-                        <pre class="card-explain">> <span>composer require symfony</span>
-> <span>composer create-project symfony/skeleton crudIT</span>
-> <span>php bin/console server:run</span></pre>
+                        <hr>
 
-                        <h4>Clonage du projet</h4>
-                        <pre class="card-explain">> <span>git clone https://github.com/ahmidbbc/crudIT</span>
-> <span>composer install</span>
-> <span>yarn install</span>
-> <span>php bin/console server:run</span></pre>
-                        <a href="https://github.com/ahmidbbc" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-github"></i> Accéder au repository
+                        <h4>Installation</h4>
+                        <pre class="card-explain">> <span>composer require twig"</span></pre>
+                        <p>ou</p>
+                        <pre class="card-explain">> <span>composer require "twig/twig:^3.0"</span></pre>
+
+                        <h4>Interpolation</h4>
+                        <div class="card-template">
+                            <p>
+                                <span>&#123;&#123;</span> myVar | escape <span>&#125;&#125;</span><br>
+                                <span>&#123;&#123;</span> myArray[0] <span>&#125;&#125;</span><br>
+                                <span>&#123;&#123;</span> myObj.attribute <span>&#125;&#125;</span>
+                            </p>
+                        </div>
+                        <a href="https://symfony.com/doc/current/templates.html#twig-templating-language" target="_blank" class="btn btn-primary btn-block">
+                            <i class="fas fa-book"></i> Accéder à la documentation
                         </a>
                     </div>
                 </div>
@@ -93,41 +101,134 @@
 
         <div class="row m-3">
 
-            <div class="col-sm">
+            <div class="col-4 d-flex flex-column flex-md-row">
+                <div class="card">
+                    <h5 class="card-title text-center">Webpack Encore</h5>
+                    <img src="{{ asset('img/logo_webpack.png') }}" class="card-img-top" alt="Symfony">
+                    <div class="card-body d-flex flex-column justify-content-between ">
+                        <p class="card-text card-explain">Webpack c'est l'art de compiler tous les ressources CSS et JS du repertoire assets (ou pas) dans un fichier unique pour chacune de ces ressources afin de réduire le poids et en simplifier la gestion.
+                            <br><br>Webpack c'est aussi quelques galères ! A quelques versions près, c'est un Jquery qui n'est plus reconnu ou un fichier config à revoir... Cela dit Jquery est cas particulier.
+                            <br><br>Outil très utile pour le "Live reload" avec l'option --watch, il est aussi un puissant allié pour gagner en performance et en interopérabilité sur diverses applications.
+                        </p>
+
+                        <hr>
+
+                        <h4>Installation de Webpack</h4>
+                        <pre class="card-explain">> <span>composer require symfony/webpack-encore-bundle</span>
+> <span>yarn install</span></pre>
+
+                        <h4>Lancer le "Build"</h4>
+                        <pre class="card-explain">> <span>yarn encore dev</span> // 1 seule fois
+> <span>yarn encore dev --watch</span> // chaque fois qu'il y a un changement dans les fichiers JS / CSS
+> <span>yarn run encore dev</span> //  changement dans webpack.config.js</pre>
+                        <a href="https://webpack.js.org/" target="_blank" class="btn btn-primary btn-block">
+                            <i class="fas fa-book"></i> Accéder à la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex flex-column flex-md-row">
+                <div class="card">
+                    <h5 class="card-title text-center">Alice Fixtures</h5>
+                    <img src="{{ asset('img/logo_alice.png') }}" class="card-img-top" alt="Symfony">
+                    <div class="card-body d-flex flex-column justify-content-between ">
+                        <p class="card-text card-explain">Dans cet exercice j'utilise Alice fixtures afin de générer des données automatiquement en indiquant simplement le type de données à créer dans le fichier <code>fixtures.yaml</code>.
+                            <br><br>C'est pratique pour générer rapidement beaucoup de (fausses) données et pour tester le comportement d'une application ou fonctionnalité.
+                            <br><br>Couplé à doctrine ORM, c'est un jeu d'enfant d'envoyer les "data" en base de données.
+                            <br><br>Bien pensé, ce bundle qui s'appuie sur l'excellente librairie PHP nommée <a href="https://github.com/fzaninotto/Faker">Faker</a> et le générateur
+                            <a href="https://github.com/nelmio/alice">nelmio/alice</a>, fourni toute une panoplie de fixtures comme des noms, des adresses, des phrases, numéros de téléphone ou carte bancaire et bien plus. Lancez, c'est généré !
+                        </p>
+
+                        <hr>
+
+                        <h4>Installation</h4>
+                        <pre class="card-explain">> <span>composer require doctrine-orm</span> // nécessaire si besoin d'envoyer les données en base
+> <span>composer require --dev hautelook/alice-bundle</span></pre>
+
+                        <h4>Envoyer les données vers la base de données</h4>
+                        <pre class="card-explain">> <span>composer require doctrine-orm</span>
+> <span>php bin/console hautelook:fixtures:load</span></pre>
+                        <a href="https://github.com/hautelook/AliceBundle" target="_blank" class="btn btn-primary btn-block">
+                            <i class="fab fa-github"></i> Accéder au repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex flex-column flex-md-row">
+                <div class="card">
+                    <h5 class="card-title text-center">Symfony Form & Security-csrf</h5>
+                    <img src="{{ asset('img/logo_symfonyForm.png') }}" class="card-img-top" alt="Symfony">
+                    <div class="card-body d-flex flex-column justify-content-between ">
+                        <p class="card-text card-explain">Voilà un moyen simple et rapide de créer des formulaires grace aux composants dédiés au formulaires: Forms.
+                            <br><br>Il s'agit donc de créer un formulaire avec le FormBuilder, de procéder à la validation des données o mieux de le lier à une entité et de le rendre accessible dans la vue (template).
+                            <br><br>Pour renforcer la sécurité, il est également possible voire recommandé d'implémenter la protection symfony/security-csrf pour se prémunir d'éventuelles falsification de requêtes et s'assurer de la provenance de celles-ci.
+                        </p>
+
+                        <hr>
+
+                        <h4>Installation</h4>
+                        <pre class="card-explain">> <span>composer require symfony/form</span> // Formulaires
+> <span>composer require symfony/security-csrf</span> // Sécurité</pre>
+
+                        <h4>Méthodes de création du formulaire</h4>
+                        <div class="card-template">
+                           $form = $this->createFormBuilder($eleve)
+                            <br><span class="tab">->add('nom', TextType::class)</span>
+                            <br><span class="tab">->add('prenom', TextType::class)</span>
+                            <br><span class="tab">->add('dateNaissance', DateType::class)</span>
+                        </div>
+
+                        <div class="card-template">
+                            return $this->render('eleve/new.html.twig', [
+                            <br><span class="tab">'formEleve' => $form->createView(),</span>
+                            <br> ]);
+                        </div>
+                        <a href="https://github.com/ahmidbbc" target="_blank" class="btn btn-primary btn-block">
+                            <i class="fas fa-book"></i> Accéder à la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div class="col-sm d-flex align-items-stretch">
                 <div class="card">
                     <h5 class="card-title text-center">Webpack Encore</h5>
                     <img src="{{ asset('img/logo_webpack.png') }}" class="card-img-top" alt="Webpack Encore">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column justify-content-between ">
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm">
+            <div class="col-sm d-flex align-items-stretch">
                 <div class="card">
                     <h5 class="card-title text-center">Alice Fixtures</h5>
                     <img src="{{ asset('img/logo_alice.png') }}" class="card-img-top" alt="Alice Fixtures">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column justify-content-between ">
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm">
+            <div class="col-sm d-flex align-items-stretch">
                 <div class="card">
                     <h5 class="card-title text-center">Symfony Form & Security-csrf</h5>
                     <img src="{{ asset('img/logo_symfonyForm.png') }}" class="card-img-top" alt="Symfony Form">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column justify-content-between ">
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
                     </div>
                 </div>
             </div>
+            -->
 
         </div>
 

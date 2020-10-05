@@ -53,12 +53,48 @@ pre {
     border: 1px solid #999;
     display: block;
     padding: 2px;
+
 }
 
 pre span{
     color: chartreuse;
+    font-size: 0.8em;
 }
 
 .card-explain{
     font-size: 0.8em;
+}
+
+.card-template{
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #999;
+    display: block;
+    padding: 2px;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+}
+
+.card-template span {
+    color: #CCCCCC;
+}
+
+.card-template p {
+    margin: 4px;
+}
+
+.card-template .tab {
+    margin-left: 2rem;
+}
+
+h4{
+    font-size: large;
+}
+
+.btn i {
+    margin-right: 20px;
+}
+
+.footer{
+    margin-top: 2rem;
 }
