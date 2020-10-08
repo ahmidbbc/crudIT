@@ -31,7 +31,7 @@ class EleveType extends AbstractType
                 //'attr' => ['class' => 'col-6']
             ])
             ->add('dateNaissance', DateType::class,  [
-                'format' => 'dd-MM-yyyy'
+                'widget' => 'single_text',
             ])
             ->add('adresse', TextType::class, [
                 //'attr' => ['class' => 'col-6']
